@@ -1,0 +1,16 @@
+{
+  "appName": "workflows",
+  "userGivenName": "workflows",
+  "destNamespace": "hackaton1",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/workflows/overlays/hackaton1",
+  "srcRepoURL": "https://github.com/daniel-codefresh/hackaton1-runtime.git",
+  "srcTargetRevision": "",
+  "labels": {
+    "codefresh_io_entity": "component",
+    "codefresh_io_internal": "true"
+  },
+  "annotations": {
+    "argocd_argoproj_io_sync-wave": "0"
+  }
+}
