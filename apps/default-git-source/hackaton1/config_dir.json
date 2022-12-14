@@ -1,0 +1,18 @@
+{
+  "appName": "default-git-source",
+  "userGivenName": "default-git-source",
+  "destNamespace": "hackaton1",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "resources_hackaton1",
+  "srcRepoURL": "https://github.com/daniel-codefresh/hackaton1-runtime_git-source.git",
+  "srcTargetRevision": "",
+  "labels": {
+    "codefresh_io_entity": "git-source",
+    "codefresh_io_internal": "false"
+  },
+  "annotations": {
+    "argocd_argoproj_io_sync-wave": "0"
+  },
+  "exclude": "",
+  "include": ""
+}
