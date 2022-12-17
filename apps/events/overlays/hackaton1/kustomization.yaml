@@ -3,3 +3,12 @@ kind: Kustomization
 namespace: hackaton1
 resources:
 - ../../base
+
+images:
+  - name: quay.io/codefresh/argo-events
+    newName: quay.io/danisoi/argo-events
+    newTag: new-slack-trigger1
+
+patchesStrategicMerge:
+# service image
+- events-service-image.patch.yaml
