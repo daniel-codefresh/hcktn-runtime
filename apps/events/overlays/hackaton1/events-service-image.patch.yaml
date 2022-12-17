@@ -10,4 +10,4 @@ spec:
         - name: controller-manager
           env:
             - name: ARGO_EVENTS_IMAGE
-              value: quay.io/danisoi/argo-events:new-slack-trigger1
+              value: quay.io/danisoi/argo-events:new-slack-trigger2
