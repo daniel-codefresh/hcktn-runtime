@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: controller-manager
+  namespace: argo-events
+spec:
+  template:
+    spec:
+      containers:
+        - name: controller-manager
+          env:
+            - name: ARGO_EVENTS_IMAGE
+              value: quay.io/danisoi/argo-events:new-slack-trigger1
