@@ -2,3 +2,24 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - github.com/codefresh-io/csdp-official/csdp/hybrid/basic/apps/argo-workflows?ref=test-workflows-3.4
+
+patches:
+  - target:
+      version: v1
+      kind: ConfigMap
+      name: workflow-controller-configmap
+    patch: |-
+      - op: add
+        path: /data
+        value:
+          artifactRepository: |
+            s3:
+              bucket: daniels-dev-bucket
+              endpoint: s3.amazonaws.com
+              accessKeySecret:                #omit if accessing via AWS IAM
+                name: aws-cred
+                key: accessKey
+              secretKeySecret:                #omit if accessing via AWS IAM
+                name: aws-cred
+                key: secretKey
+              useSDKCreds: true               #tells argo to use AWS SDK's default provider chain, enable for things like IRSA support
