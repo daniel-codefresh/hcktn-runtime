@@ -22,4 +22,3 @@ patches:
               secretKeySecret:                #omit if accessing via AWS IAM
                 name: aws-cred
                 key: secretKey
-              useSDKCreds: true               #tells argo to use AWS SDK's default provider chain, enable for things like IRSA support
